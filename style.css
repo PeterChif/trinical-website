@@ -1,0 +1,555 @@
+/* Styling for the index page */
+header{
+    margin: 5%;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+/* Body styling forc all */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #19644e;
+    border-bottom: 2px solid #113a3a;
+}
+
+.logo-TC img {
+    width: 80px;
+    height: auto;
+}
+
+/* Navigation */
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #ddd7d7;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2a9d8f; /* soft green highlight */
+}
+
+/* Main Content styling for index */
+.home-page {
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.home-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #264653; /* dark teal */
+}
+
+.home-page img {
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.home-page p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Video */
+iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+/* About Page */
+.about {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #264653;
+}
+
+.about-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* For larger screens, show text + image side by side */
+@media (min-width: 768px) {
+    .about-intro {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .about-intro img {
+        flex: 0 0 200px;
+    }
+
+    .about-intro p {
+        flex: 1;
+    }
+}
+
+.about-intro img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #2a9d8f;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+.about-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+/* Highlight active nav link */
+nav a.active {
+    color: #2a9d8f;
+    font-weight: bold;
+}
+
+/* Shop page styling*/
+.shop {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.shop h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #264653; /* same dark teal as homepage */
+}
+
+.category {
+    margin-bottom: 3rem;
+}
+
+.category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2a9d8f; /* soft green accent */
+    /*border-bottom: 2px solid #ddd;*/
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+/* Product Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Individual Product Card */
+.product-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+}
+
+/* Product Text */
+.product-card p {
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.product-card span {
+    color: #e76f51; /* warm coral highlight for prices */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Other Products List */
+.category ol {
+    list-style: decimal inside;
+    text-align: left;
+    max-width: 400px;
+    margin: 1rem auto;
+    padding-left: 1rem;
+}
+
+.category ol li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+
+
+/* Contact page styling */
+.contact {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #264653; /* dark teal */
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.contact a {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Info Block */
+.contact p b {
+    color: #264653;
+}
+
+/* Map Styling */
+.contact iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    border-radius: 12px;
+    margin: 1.5rem auto;
+    display: block;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Google Form Embed */
+.contact iframe[src*="docs.google.com"] {
+    width: 100%;
+    max-width: 800px;
+    height: 800px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Review page styling */
+.review {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.review h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #264653;
+    text-align: center;
+}
+
+.review h2 {
+    color: #2a9d8f;
+    margin: 2rem 0 1rem;
+    text-align: center;
+}
+
+.review h4 {
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+.review p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.review a {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #2a9d8f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.review a:hover {
+    text-decoration: underline;
+}
+
+/* Review Table */
+.review table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.review table th,
+.review table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.review table th {
+    background-color: #2a9d8f;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.review table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.review table tr:hover {
+    background-color: #f1fdfb;
+}
+
+/* Optional: make table responsive */
+@media (max-width: 700px) {
+    .review table,
+    .review table thead,
+    .review table tbody,
+    .review table th,
+    .review table td,
+    .review table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .review table tr {
+        margin-bottom: 1rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .review table td {
+        border: none;
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .review table th {
+        display: none;
+    }
+
+    .review table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+}
+.review table th {
+    font-weight: bold;
+    background: #f7f7f7;
+}
+.review table td {
+    padding: 8px 10px;
+    text-align: left;
+}
+
+}
+
+/* For smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* For Shope page, 5 star rating review */
+.rating {
+  display: flex;
+  gap: 5px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.rating .star:hover,
+.rating .star.hovered,
+.rating .star.selected {
+  color: gold;
+}
+
+.rating-result {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Making the site responsive to a mobile phone */
+
+/* =========================
+   Mobile Responsive Design
+   ========================= */
+@media (max-width: 700px) {
+  /* General layout */
+  body {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .logo-TC img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 5px 0;
+    font-size: 0.95rem;
+  }
+
+  /* Homepage */
+  .home-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-page img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* About page */
+  .about-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-intro img {
+    width: 120px;
+    margin-bottom: 1rem;
+  }
+
+  /* Shop Page */
+  .shop h1 {
+    font-size: 1.6rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .product-card {
+    padding: 0.8rem;
+  }
+
+  .product-card img {
+    border-radius: 8px;
+  }
+
+  /* Contact Page */
+  .contact iframe {
+    height: 250px;
+  }
+
+  .contact iframe[src*="docs.google.com"] {
+    height: 600px;
+  }
+
+  /* Review Page */
+  .review h1 {
+    font-size: 1.5rem;
+  }
+
+  .review p {
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  footer img {
+    width: 30px;
+  }
+}
+
+
+
+/* Footer */
+footer {
+    background: #264653;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer img {
+    margin-top: 0.5rem;
+    width: 40px;
+    height: auto;
+}
+
